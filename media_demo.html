@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <title>html影像篇</title>
+    </head>
+
+    <body>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+        <body bgcolor="#fff">
+            <h1 align="center" style="margin:50px">HTML影像篇</h1>
+            <div style="background-color:#FFF8D7; margin:25px 5%;
+  padding:30px;">
+
+                <h1>&ltimg&gt標籤</h1>
+
+                <code>
+                    格式：&ltimg src="圖片連結" alt="掉圖的時候，會顯示這段文字" width="寬" height="高" align="對齊方式" &gt&lt/img&gt
+                </code><br>
+                <div>
+
+                    <img src="img/media_demo.jpg" alt="掉圖的時候，會顯示這段文字" align="center" width=" " height=" "></img><br><br>
+                    <h3>響應式圖片</h3>
+                    <p>可以只設定「寬（Ｗ）」或「高（Ｈ）」來控制圖片大小</p>
+                    <p>如果用「px/pt/rem」等單位，會固定大小</p>
+                    <img src="img/media_pic.jpg" width="" height="100px"></img><br>
+                    <pre>&ltimg src="img/media_pic.jpg" width="" height="100px"&gt&lt/img&gt</pre><hr>
+                    <p>但如果使用百分比「%」來當作單位的話，可以根據螢幕尺寸大小調整控制圖片</p>
+                    <img src="img/media_pic.jpg" width="100%" height=""></img>
+                    <pre>&ltimg src="img/media_pic.jpg" width="100%" height=""&gt&lt/img&gt</pre><hr>
+
+                    <p>align可以控制文繞圖方式</p>
+                如果前面有文字，圖片會被往後推，在這邊等於「與文字排列」
+                <img src="img/media_middle.jpg" alt="掉圖的時候，會顯示這段文字" align="middle" width="" height=" 100px">置中:文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</img>
+                    <br><hr>
+                
+                如果前面有文字，圖片不會被往後推
+                <img src="img/media_left.jpg" alt="掉圖的時候，會顯示這段文字" align="left" width="" height=" 100px">置左：文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</img>
+                    <br><br><br><hr>
+如果前面有文字，圖片不會被往後推，因為他已經在後面了
+                <img src="img/media_right.jpg" alt="掉圖的時候，會顯示這段文字" align="right" width="" height=" 100px">置右：文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</img>
+                    <br>
+                </div>
+                <br>
+                <br>
+
+                <hr>
+                <h1>&ltvideo&gt標籤</h1>
+                <video width="320" height="240" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+                <h1>&ltiframe&gt標籤</h1>
+                <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>
+                <pre>&ltiframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"&gt&lt/iframe&gt</pre>
+
+            </div>
+        </body>
+
+    </html>
