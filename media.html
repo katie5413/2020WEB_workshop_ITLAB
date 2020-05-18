@@ -41,7 +41,7 @@
                 </code><br>
                 <div>
 
-                    <img src="img/media_demo.jpg" alt="掉圖的時候，會顯示這段文字" align="center" width=" " height=" "></img><br><br>
+                    <img src="img/missing_picture.jpg" alt="掉圖的時候，會顯示這段文字" ></img><br><br>
                     <h3>響應式圖片</h3>
                     <p>可以只設定「寬（Ｗ）」或「高（Ｈ）」來控制圖片大小</p>
                     <p>如果用「px/pt/rem」等單位，會固定大小</p>
@@ -65,20 +65,38 @@
                 </div>
                 <br>
                 <br>
-
                 <hr>
+                <h3>其實圖片還可以當作連結</h3>
+                <code>格式：&lta href="連結前往的網址"&gt&ltimg src="圖片網址" width="寬" height="高"&gt&lt/a&gt</code>
+
+                <p>比如我們常看到的icon連結，可以有效將資訊視覺化</p>
+                <p>像是後面這個<span><a href="index.html"><img src="img/home.svg" width="30" height="30"></a></span>，一看就知道是回home page</p>
+ 
+                <p>這邊順便推薦我常用的icon圖庫（大心）：<span><a target="blank" href="https://www.flaticon.com/most-downloaded?utm_source=awin&utm_medium=display&utm_campaign=cupon&awc=18410_1589811011_d920ddc691a7e9af4e091281adf1765e"><img src="img/icon.svg" width=" 100" height=" 100"></a>
+</span></p>
+                
+
+
+
                 <h1>&ltvideo&gt標籤</h1>
-                <video width="320" height="240" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
+                <p>這個要把檔案先載下來放在你的專案資料夾，每次連頁面會重載一次，導致載入速度變慢</p>
+                <p>但這個相對妥當，因為不會突然掉連結（ＥＸ：原始連結被刪掉等</p>
+                <video width=" 300" height=" 200" controls>       
+                <!-- 優先序：從上往下，如果第一個失敗就跑第二個，如果都不行就顯示瀏覽器不支援-->    
+                    <source src="src_notwork.ogg" type="video/ogg">
+                    <source src="img/like.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
                 <h1>&ltiframe&gt標籤</h1>
-                <iframe width="420" height="315"
-src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>
-                <pre>&ltiframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"&gt&lt/iframe&gt</pre>
+                <p>這個檔案不需要先載下來，但需要靠網路，且不能保證外部連結永遠都在</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AN0rQR0RlOM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <pre>&ltiframe width="560" height="315" src="https://www.youtube.com/embed/AN0rQR0RlOM" frameborder="0"  autoplay; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen&gt&lt/iframe&gt</pre>
 
             </div>
+            <div align="center" style="margin:20px">
+                    <a href="index.html">回首頁</a>
+                </div>
         </body>
 
     </html>
