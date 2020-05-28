@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <!--順序會影響css，後面會蓋掉前面的，放這邊是因為bs也有設定a的樣式-->
+        <link rel="stylesheet" type="text/css" href="css/css_class_id_often_demo.css">
+        <title>class與id還有常用屬性篇</title>
+    </head>
+    <body bgcolor="#fff">
+        <h1 align="center" style="margin:50px">class與id還有常用屬性篇</h1>
+        <div style="background-color:#FFF8D7; margin:25px 5%;padding:30px;ul.margin:10px;li.margin:5px;">
+            <h1>.Class / #Id</h1>          
+            <p>簡單來說 <b>直接指定style > #id > .class > 普通標籤</b>：</p>
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML</h5>
+                        <p>我是p</p>
+                        <code style="color:gray;">這裡的同階層的順序不影響結果，真正的戰場在css</code>
+                        <p class="blue ivory underline">我是class="blue ivory underline"的p</p>
+                        <p class="blue" id="red">我是class="blue" id="red"的p</p>
+                        <p class="blue" id="red" style="color:green;">我是class="blue" id="red" style="color:green;"的p</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS</h5>                                    
+                            <code>p{ color:black; }</code><br>
+                            <code>.ivory{ color:ivory;}</code><br>
+                            <code style="color:gray;"></code>/*blue 比 ivory 還後面，所以會蓋掉前面的*/</code><br>
+                            <code>.blue{ color:blue; }</code><br>
+                            <code style="color:gray;">/*雖然同階層，但結果不衝突，所以會1+1=2*/</code><br>
+                            <code>.underline{ text-decoration:underline; }</code><br>
+                            <code>#red{ color:red; } </code><br>
+                        </div>
+                    </div>
+                </div> 
+                </div>
+            </div>
+            <hr>
+            <h1>常用屬性</h1>
+            <h3>文字類</h3>
+            <code>color：文字顏色;</code><br>  
+            <code>font-size：文字大小;</code><br>
+            <code>text-decoration：文字裝飾;</code><code style="color:gray;">//bold,underline,italic</code><br>
+            <p>其中，顏色又有許多表現方式</p>
+            <ul>
+                <li>color：預設顏色; //red,green,#FFFFF.. 有興趣可以去看<a target="_blank" href="https://www.ifreesite.com/color/web-color-code.htm">常用顏色表</a></li>
+                <li style="color:rgba(51,102,153);">color：rgb(red,green,blue); <code style="color:gray;">//rgb(255,255,255)＝white</code></li>
+                <li style="color:rgba(0,0,0,0.3);">color：rgba(red,green,blue,alpha); <code style="color:gray;">//rgb(0,0,0,0.3)</code></li>
+            </ul>
+            <h6>首行縮排</h6>
+            <p style="text-indent:2em;">首行縮排兩字元，這邊不重要，我只是要增加字數讓他可以顯示兩排就好，快要到了！快要到了！怎麼還沒到？？？？？說好的兩排呢？這下該到了吧。對了這邊不建議中英夾雜，因為中文跟英文的字距不太一樣
+            </p>
+            <a class="a_demo" target="_blank" href="http://google.com">a標籤可以用hover，滑鼠滑過去會有特殊效果</a>
+            <ul class="li_demo">
+                <li>清單也可以</li>
+            </ul>  
+            <h3>背景</h3>
+            <p>像下面這個parallax scrolling effect （<a target="_blank" href="https://www.w3schools.com/cssref/pr_background-attachment.asp">詳見此</a>）用起來感覺就很厲害</p>
+            <p>但其實超簡單，html只需要一行(加字要多兩行)，css只需要改兩個地方</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">HTML</h5>
+                                <code>&ltdiv class="fixed-bg"&gt</code><br>
+                                <code>&ltp class="bg_text" align="center"&gt也可以在這加字啦&lt/p&gt</code><br>
+                                <code>&lt/div&gt</code>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS文字</h5>
+                                <code>.bg_text{</code><br>
+                                <code>font-size: 4rem;</code><br>
+                                <code>color:white;</code><br>
+                                <code>}</code>
+                            </div>
+                        </div>
+                        <p>如果這也無法滿足你，可以去（<a target="_blank" href="https://www.w3schools.com/cssref/css3_pr_background.asp">這裡看更多</a>）</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS圖片</h5>
+                                <code>.fixed-bg {</code><br>
+                                <code style="color:gray;">/* （改）這裡放圖片 */</code><br>
+                                <code>background-image: url("../img/media_pic2.jpeg");</code><br>
+                                <code style="color:gray;">/* （改）設定要顯示的大小 */</code><br>
+                                <code>min-height: 500px;</code><br>
+                                <code style="color:gray;">/* 下面照貼就好，不用動 */</code><br>
+                                <code style="color:gray;">/* 固定圖片位置 */</code><br>
+                                <code>background-attachment: fixed;</code><br>
+                                <code style="color:gray;">/* 圖片置中 */</code><br>
+                                <code>background-position: center;</code><br>
+                                <code style="color:gray;">/* 圖片不重複 */</code><br>
+                                <code>background-repeat: no-repeat;</code><br>
+                                <code style="color:gray;">/* 縮放圖片至最大尺寸 */</code><br>
+                                <code>background-size: cover;</code><br>
+                                <code>}</code><br>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <br>
+            <div class="fixed-bg"><p class="bg_text" align="center">也可以在這加字啦</p></div>
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div align="center" style="margin:20px">
+            <a href="index.html">回首頁</a>
+        </div>        
+    </body>
+</html>

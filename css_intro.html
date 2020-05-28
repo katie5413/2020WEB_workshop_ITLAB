@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <style type="text/css">
+            p{text-decoration:none; color:blue}
+        </style>
+        <!--順序會影響css，後面會蓋掉前面的，放這邊是因為bs也有設定a的樣式-->
+        <link rel="stylesheet" type="text/css" href="css/css_demo.css">
+        <title>CSS簡介</title>
+    </head>
+
+    <body bgcolor="#fff">
+        <h1 align="center" style="margin:50px">CSS簡介篇</h1>
+        <div style="background-color:#FFF8D7; margin:25px 5%;padding:30px;">
+            <h1>CSS</h1>
+            <p>CSS（Cascading Style Sheet） 直譯為「層疊樣式表」，顧名思義就是可以一層一層給他穿衣服</p>
+            <code>格式：選擇器{ 屬性一:數值; 屬性二:數值;....}</code>
+            <h4>起手式：</h4>
+            <p>方法一：在 head 的範圍中加入 style 標籤。此方法的 CSS 樣式，會套用到這個頁面的每個被選中的物件</p>
+            <pre>
+            &lthead&gt
+            ...
+                &ltstyle type="text/css"&gt
+                    p{color:blue;}  這個網頁中所有p標籤包住的內容都會變藍色的
+                &lt/style&gt
+            ...
+            &lt/head&gt
+            </pre>
+            <p>方法二：在其他檔案(例如 css_demo.css)寫好css，然後再連結進來。此方法的 CSS 樣式，也可以套用到這個頁面的每個被選中的物件</p>
+            <pre>
+            &lthead&gt
+            ...
+                &ltlink rel=“stylesheet” type="text/css" href="css/css_demo.css"&gt 
+            ...
+            &lt/head&gt
+            </pre>
+            <p>可以在F12的source，找到css_demo.css裡面放了什麼</p>
+            <a href="index.html">測試css_demo有沒有影響</a>
+            <p>方法三：直球對決。在標籤中使用 style 屬性。此方法的樣式，只對被使用 style 屬性的標籤有效</p>
+            <pre>
+            &ltbody&gt
+            ...
+                &ltp style="color:red;"&gt&lt/p&gt
+            ...
+            &lt/body&gt
+            </pre>
+            <p style="color:red;">測試直接加style有沒有影響</p>
+            <p>推薦使用第二個方法，用外部連結，比較好管理你的程式碼，而且原本的HTML檔也比較乾淨</p>
+        </div>
+
+            <div align="center" style="margin:20px">
+                <a href="index.html">回首頁</a>
+            </div>
+    </body>
+
+</html>

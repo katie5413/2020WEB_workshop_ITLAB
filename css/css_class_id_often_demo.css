@@ -1,0 +1,59 @@
+p{
+    color:black;
+  }
+  
+.ivory{
+color:ivory;
+}
+/*blue 比 ivory 還後面，所以會蓋掉前面的*/
+.blue{
+color:blue;
+}
+/*blue 跟 underline雖然同階層，但結果不衝突，所以會1+1=2*/
+.underline{
+text-decoration:underline;
+}
+
+#red{
+color:red;
+}
+   
+/*下面是常用屬性*/
+/*文字*/
+.black{
+  color:rgb(0, 0, 0);
+}
+/*「:link（未點）」和「:visited(點過)」必須在最前面，接著依序才是「:hover（懸浮）」和「:active（正在被觸發）」*/ 
+.a_demo:link{color:blue}
+.a_demo:visited{color:purple}
+.a_demo:hover{color:red}
+.a_demo:active{color:green}
+/*「:link（未點）」和「:active（正在被觸發）」也可以用在 list */ 
+.li_demo:hover{color:red}
+.li_demo:active{color:green}
+
+
+.fixed-bg {
+  /* （改）這裡放圖片 */
+  background-image: url("../img/media_pic2.jpeg");
+  /* （改）設定要顯示的大小 */
+  min-height: 500px;
+  /* 下面照貼就好，不用動 */
+  /* 固定圖片位置 */
+  background-attachment: fixed;
+  /* 圖片置中 */
+  background-position: center;
+  /* 圖片不重複 */
+  background-repeat: no-repeat;
+  /* 縮放圖片至最大尺寸 */
+  background-size: cover;
+  /* 下面是控制文字置中 */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.bg_text{
+  font-size: 4rem;
+  color:white;
+}
