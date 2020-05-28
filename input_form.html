@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <title>html表單篇</title>
+    </head>
+    <body bgcolor="#fff">
+        <h1 align="center" style="margin:50px">HTML表單篇</h1>
+        <div style="background-color:#FFF8D7; margin:25px 5%;padding:30px;ul.margin:10px;li.margin:5px;">
+            <h1>表單</h1>
+            <h5>表單需要有後端資料庫才會存資料，因這堂課以靜態網頁為主，所以這裡只介紹常用按鈕以及基本資安觀念</h5>
+            <form>
+                帳號：<input type="text" value="013" size="20" maxlength="10"><br><br>
+                密碼：<input type="password" value="imsuperhot" size="20" maxlength="10"><br><br>
+                按鈕：<input  class="btn btn-primary" type ="button" onclick=" location.href='#form' " value="跳到指定位置"></input> 
+                <a href="#form" class="btn btn-secondary">跟旁邊的功能一樣</a>
+                <button type="submit" onclick="window.open('test.pdf')" class="btn btn-success">按鈕也可下載</button>
+                <!-- value：數值-->
+                <!-- onclick：點擊時觸發指定動作，通常會使用js配合-->
+            </form>
+            <br>
+            <hr>
+            <p>以下為補充，有時間才會教</p>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                    <p id="war"> </p>
+                    宗教戰爭（單選）：
+                    <input type="radio" name="test1" value="選項a" id="a"><label for="a">北部粽</label>
+                    <input type="radio" name="test1" value="選項b" id="b" ><label for="b">中部粽</label>
+                    <input type="radio" name="test1" value="選項c" id="c" ><label for="c">南部粽</label>
+                    <!-- value：數值-->
+                    <!-- label：選項文字說明-->
+                    <br><br>
+                    
+                    請選出南部縣市（多選）：
+                    <input type="checkbox" name="test2" value="基隆"  ><label for="基隆">基隆</label>
+                    <input type="checkbox" name="test2" value="台北"  ><label for="台北">台北</label>
+                    <input type="checkbox" name="test2" value="新北"  ><label for="新北">新北</label>
+                    <input type="checkbox" name="test2" value="桃園"  ><label for="桃園">桃園</label>
+                    <input type="checkbox" name="test2" value="新竹"  ><label for="新竹">新竹</label>
+                    <input type="checkbox" name="test2" value="台中"  ><label for="台中">台中</label>
+                    <input type="checkbox" name="test2" value="彰化"  ><label for="台中">彰化</label>
+                    <input type="checkbox" name="test2" value="南投"  ><label for="南投">南投</label>
+                    <input type="checkbox" name="test2" value="雲林"  ><label for="雲林">雲林</label>
+                    <input type="checkbox" name="test2" value="嘉義"  ><label for="嘉義">嘉義</label>
+                    <input type="checkbox" name="test2" value="台南"  ><label for="台南">台南</label>
+                    <input type="checkbox" name="test2" value="高雄"  ><label for="高雄">高雄</label>
+                    <input type="checkbox" name="test2" value="屏東"  ><label for="屏東">屏東</label>
+
+                    <!-- value：數值-->
+                    <!-- label：選項文字說明-->
+                    <br><br>
+                    
+                    下拉式選單：
+                    <select>
+                        <option value="16">16~20</option>
+                        <option value="21" selected>21~25</option>
+                        <option value="26">26~30</option>
+                        <option value="31">31~35</option>
+                        <!-- value：控制數值大小來分類-->
+                    </select>
+                    <br><br>
+                    備註：<textarea rows="2" cols="20" placeholder="這裡叫做placeholder"></textarea><br><br>
+                        <!-- rows/cols：控制輸入框大小-->
+                        <input type="button"  value="這是一般按鈕">
+                        <input type="submit" value="這是送出按鈕">
+                        <input type="reset"  value="這是清除按鈕">
+                    </form>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        請選擇數字：
+                        <input type="range" min="0" max="10" step="0.5" value="2.5">
+                        <br><br>
+                        
+                        請選擇顏色：
+                        <input type="color">
+                        <br><br>
+                        
+                        請選擇日期：
+                        <input type="date" min="2020-06-01" max="2020-06-18" step="2">
+                        <!-- max：最大可以選的日期-->
+                        <!-- step：每隔幾天一次-->
+                        <br><br>
+                        
+                        進度條：
+                        <progress value="20" max="100"></progress>
+                        <!-- value：目前的數值-->
+                        <br><br>
+                        
+                        e-mail：
+                        <input type="email" required multiple>
+                        <!-- required：必填-->
+                        <br><br>
+                        
+                        近來可好？：
+                        <input type="text" placeholder="近來可好？">
+                        <br><br>
+                        
+                        禁止自動完成：
+                        <input type="text" autocomplete="off">
+                        <br><br>
+                        
+                        list 屬性與 datalist：
+                        <input type="text" placeholder="近來可好？" list="isGood">
+                        <datalist id="isGood">
+                            <option value="好" label=":)">
+                            <option value="普通" label=":|">
+                            <option value="不好" label=":(">
+                        </datalist>
+                        <br><br>
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            <br>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="這裡叫做placeholder" aria-label="Search">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+                
+            <hr>
+            <h2 id="form">內嵌表單</h2>
+            <p>如果懶得自己刻表單，或是不會串後端資料庫，你可以心懷感激的使用下面這些現有的線上問卷(用iframe嵌入)</p>
+            <code>&ltiframe width="寬" height="高" src="問卷嵌入連結"  frameborder="0" marginheight="0" marginwidth="0" &gt載入中…&lt/iframe&gt</code>
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Survey Cake</h4>
+                        <p>優：美觀、功能多</p>
+                        <p>缺：載入速度較慢、部份功能需付費</p>
+                        <iframe width="100%" height="900" src="https://www.surveycake.com/s/R7dez" style="border:#ddd 1px solid;" allowTransparency="true" frameborder="0"> </iframe>                       
+                        
+                    </div>
+                    <div class="col-6">
+                        <h4>Google</h4>
+                        <p>優：載入速度快、有<a href="https://humorousaaron.wordpress.com/2016/06/14/googleformnotification/">新回應自動寄信通知</a></p>
+                        <p>缺：功能不多，堪用</p>
+                        <iframe width="100%" height="720" src="https://docs.google.com/forms/d/e/1FAIpQLSebUwY8gqO1AgnGws1gwbjRVyatyjijM6tn7g7GPGj3FjlGJQ/viewform?embedded=true"  frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+                        <br>
+                    </div> 
+                    <p>步驟：建立問卷 > 分享問卷 > 滑到下面複製內嵌問卷那欄裡面的程式碼｜<a href="https://blog.surveycake.com/06-07-4cb612ebcf05">詳細教學</a></p>                    
+                </div>
+                <hr>
+                <h1>表單聽起來很棒，但是！</h1>
+                    <del>投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明...</del>
+                    <p>這個世界是充滿惡意的，網路世界充滿了許多惡意爬蟲／機器人專門在幫別人的伺服器做壓力測試＾＿＿＿＾</p>
+                    <p>他被主人創造出來之後，被丟在網路世界遊蕩，每天就做一件事，「灌好，灌滿，灌到爆，就是俗稱的<b>灌爆</b>」</p>
+                    <p>不是每個表單都有幫大家做防止大量填寫的防護</p>
+                    <p>特別是自己刻的表單，更要特別小心</p>
+            </div>
+        </div>
+        <div align="center" style="margin:20px">
+        <a href="index.html">回首頁</a>
+    </div>        
+    </body>
+</html>
