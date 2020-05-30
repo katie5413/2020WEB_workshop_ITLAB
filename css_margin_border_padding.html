@@ -96,7 +96,7 @@
             <h1>常用排版</h1>
             <h3>Position</h3>
             <p style="position:absolute; top:100px; right:20px;">這是一個被定位的段落</p>
-            <p>你還記得剛剛那個被定位的段落嗎？</p>
+            <p>你還記得剛剛那個被定位的段落嗎？<span>不記得的話往上滑</span></p>
             <p>他使用了<code>style="position:absolute; top:100px; right:20px;"</code>的屬性，不管世界如何變化，他始終如一</p>
             <p style="position:relative; left:120px;">這是另一個被定位的段落</p>
             <p>他使用了<code>style="position:relative; left:120px;"</code>的屬性，將元素從原本應該在的位置，進行相對的移動</p>
@@ -142,11 +142,160 @@
             
 
             <hr>
-            <h6>首行縮排</h6>
+            <h3>對齊｜<a href="http://csscoke.com/2018/08/21/css-vertical-align/">23種置中方式</a></h3>
+            <p>對齊這個東西呢，說上好幾天都不是問題，等以後你們真的遇到的時候，就會感受到這句話背後有多少的血與淚</p>
+            <h5>文字對齊</h5>
+            <p style="align:center;"><p>這裡使用了<code>align:center;</code>的屬性，但文字沒有置中</p>
+            <p style="text-align:center;"><p>這裡使用了<code>text-align:center;</code>的屬性，但文字還是沒有置中</p>
+            <p>首先知道text-align:center這個就先對一半</p>
+            <b>完整的解法是要先用一個div把內容包住，然後把<code>style="text-align:center;"</code>，放在div標籤</b>
+            <div class="container">
+                <h5>文字置中</h5>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" style="height:112px">
+                            <div class="card-body" >
+                                <div style="text-align:center;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" >
+                            <code>&ltdiv style="text-align:center;"&gt</code><br>
+                            <code>&ltp&gt我是文字&lt/p&gt</code><br>
+                            <code>&lt/div&gt</code>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h5>文字置左</h5>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" style="height:112px">
+                            <div class="card-body" >
+                                <div style="text-align:left;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" >
+                            <code>&ltdiv style="text-align:left;"&gt</code><br>
+                            <code>&ltp&gt我是文字&lt/p&gt</code><br>
+                            <code>&lt/div&gt</code>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h5>文字置右</h5>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" style="height:112px">
+                            <div class="card-body" >
+                                <div style="text-align:right;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" >
+                            <code>&ltdiv style="text-align:right;"&gt</code><br>
+                            <code>&ltp&gt我是文字&lt/p&gt</code><br>
+                            <code>&lt/div&gt</code>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h5>文字分散對齊｜<a href="https://www.minwt.com/webdesign-dev/css/11522.html">中文分散對齊</a></h5>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" style="height:250px">
+                            <div class="card-body" >
+                                <div style="text-align: justify;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+                                </div>
+                                <hr>
+                                <div style="text-align: justify;text-justify: distribute-all-lines;text-align-last: justify;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card" style="height:250px">
+                            <div class="card-body" >
+                            <code>&ltdiv style="text-align: justify;"&gt</code><br>
+                            <code>&ltp&gt我是文字&lt/p&gt</code><code style="color:gray;">  //最後一行沒有分散對齊</code><br>
+                            <code>&lt/div&gt</code>
+                            <hr>
+                            <code>&ltdiv style="text-align: justify;text-justify: distribute-all-lines;text-align-last: justify;"&gt</code><br>
+                            <code>&ltp&gt我是文字&lt/p&gt</code><code style="color:gray;">  //最後一行也會分散對齊</code><br>
+                            <code>&lt/div&gt</code>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>            
+            <h6>（補充）首行縮排</h6>
             <code>style="text-indent:2em;"</code><br>
             <p style="text-indent:2em;">首行縮排兩字元，這邊不重要，我只是要增加字數讓他可以顯示兩排就好，快要到了！快要到了！怎麼還沒到？？？？？說好的兩排呢？這下該到了吧。對了這邊不建議中英夾雜，因為中文跟英文的字距不太一樣</p>
-            
 
+            <hr>
+            <h5>物件置中</h5>
+            <div class="container">
+            <h5 class="card-title">方法一：水平置中</h5>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" style="height:200px">
+                            <div class="card-body" >
+                            
+                                <img style="display:block; margin:auto;" src="img/fox.png" width="80px"></img>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card" style="height:200px">
+                            <div class="card-body" >
+                            <code>&ltdiv style="display:block;margin:auto;"&gt</code><br>
+                            <code style="color:gray;">  //控制左右大小來置中</code><br>
+                            <code>&ltimg src="圖片連結"&gt我是圖片&lt/img&gt</code><br>
+                            <code>&lt/div&gt</code>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h5 class="card-title">方法二：水平垂直置中</h5>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card" style="height:200px">
+                            <div class="card-body" style="display:flex; justify-content:center; align-items:center;">
+                                <img src="img/fox.png" width="80px"></img><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card" style="height:200px">
+                            <div class="card-body" >
+                            <code>&ltdiv style="display: flex;justify-content: center;align-items: center;"&gt</code><br>
+                            <code>&ltimg src="圖片連結"&gt我是圖片&lt/img&gt</code><br>
+                            <code>&lt/div&gt</code>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div align="center" style="margin:20px">
             <a href="index.html">回首頁</a>
