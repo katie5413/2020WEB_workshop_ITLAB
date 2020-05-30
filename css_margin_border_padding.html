@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        
+        <title>排版篇</title>
+    </head>
+    <body bgcolor="#fff">
+        <h1 id="top"align="center" style="margin:50px">排版篇</h1>
+        <div  style="background-color:#FFF8D7; margin:25px 5%;padding:30px;">
+            <h3>margin（邊界）、border（邊框）、padding（邊距）</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" align="center">
+                                <img src="img/css_margin_border_padding.png" width="60%" ></img>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">margin：城牆外的穀物種植區</h5>
+                                <h5 class="card-title">border：城牆</h5>
+                                <h5 class="card-title">padding：城堡到城牆的距離</h5>
+                                <h5 class="card-title">content：城堡建築本人</h5>                                      
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" >
+                                <h5 class="card-title">Margin</h5>
+                                <code>margin-top／right／bottom／left：外距大小;</code><code style="color:gray;">   //控制單一方向</code><br>  
+                                <code>margin：（上／右／下／左）;</code><code style="color:gray;">  //一個數值</code><br>
+                                <code>margin：（上／下）（左／右）;</code><code style="color:gray;">    //二個數值</code><br>
+                                <code>margin：（上）（左／右）（下）;</code><code style="color:gray;">  //三個數值</code><br>
+                                <code>margin：（上）(右)（下）(左);</code><code style="color:gray;">    //四個數值</code><br>                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" >
+                                <h5 class="card-title">Padding</h5>
+                                <code>padding-top／right／bottom／left：內距大小;</code><code style="color:gray;">   //控制單一方向</code><br>  
+                                <code>padding：（上／右／下／左）;</code><code style="color:gray;">  //一個數值</code><br>
+                                <code>padding：（上／下）（左／右）;</code><code style="color:gray;">    //二個數值</code><br>
+                                <code>padding：（上）（左／右）（下）;</code><code style="color:gray;">  //三個數值</code><br>
+                                <code>padding：（上）(右)（下）(左);</code><code style="color:gray;">    //四個數值</code><br>                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr>
+                        <p style="border:1px double;margin:10px 60px 30px 140px;">這是一個style="border:1px double;margin:10px 60px 30px 140px;"的p</p>
+                        <hr>
+                        <p style="border:1px dotted;padding:10px 60px 30px 140px;">這是一個style="border:1px dotted;padding:10px 60px 30px 140px;"的p</p>
+                        <hr>
+                        <p style="border:solid;border-width:10px 60px 30px 140px;">這是一個style="border:1px solid;padding:10px 60px 30px 140px;"的p</p>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h1>常用排版</h1>
+            <h3>Position</h3>
+            <p style="position:absolute; top:100px; right:20px;">這是一個被定位的段落</p>
+            <p>你還記得剛剛那個被定位的段落嗎？</p>
+            <p>他使用了<code>style="position:absolute; top:100px; right:20px;"</code>的屬性，不管世界如何變化，他始終如一</p>
+            <p style="position:relative; left:120px;">這是另一個被定位的段落</p>
+            <p>他使用了<code>style="position:relative; left:120px;"</code>的屬性，將元素從原本應該在的位置，進行相對的移動</p>
+            <p>現在看右下角的top圖示</p>
+            <p>他使用了<code>style="position:fixed;right:1rem;bottom: 10px;"</code>的屬性，將元素釘在視窗上</p>
+            <a href="#top">
+                <img src="img/top.png" width="40px" style="position:fixed;right:1rem;bottom: 10px;"></img>
+            </a>
+            <hr>
+            <h3>Display:none v.s Visibility:hidden</h3>
+            <p>消失的<span style="Display:none">密室</span>（哈利波特）｜<code>style="Display:none"</code></p>
+            <p>消失的<span style="Visibility:hidden">密室</span>(哈利波特)｜<code>style="Visibility:hidden"</code></p>
+            <h4>同場加映：Display:block v.s Display:inline</h4>
+            <p>其實就跟p還有span的關係一樣</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" >
+                                <h5 class="card-title">Display:block</h5>
+                                <img src="img/fox.png" width="20%" style="Display:block"></img>
+                                <img src="img/cone.png" width="20%" style="Display:block"></img>
+                                <img src="img/toucan.png" width="20%" style="Display:block"></img>
+                                <img src="img/monkey.png" width="20%" style="Display:block"></img>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body" >
+                                <h5 class="card-title">Display:inline</h5>
+                                <img src="img/fox.png" width="20%" style="Display:inline"></img>
+                                <img src="img/cone.png" width="20%" style="Display:inline"></img>
+                                <img src="img/toucan.png" width="20%" style="Display:inline"></img>
+                                <img src="img/monkey.png" width="20%" style="Display:inline"></img>                            
+                            </div>
+                        </div>
+                        <p>註：當然你也可做成響應式的，只要在尺寸那邊使用 「%」作單位就好</p>
+                        補充：<a href="https://www.w3schools.com/cssref/pr_class_display.asp">display:inline-block</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <hr>
+            <h6>首行縮排</h6>
+            <code>style="text-indent:2em;"</code><br>
+            <p style="text-indent:2em;">首行縮排兩字元，這邊不重要，我只是要增加字數讓他可以顯示兩排就好，快要到了！快要到了！怎麼還沒到？？？？？說好的兩排呢？這下該到了吧。對了這邊不建議中英夾雜，因為中文跟英文的字距不太一樣</p>
+            
+
+        </div>
+        <div align="center" style="margin:20px">
+            <a href="index.html">回首頁</a>
+        </div>        
+    </body>
+</html>
