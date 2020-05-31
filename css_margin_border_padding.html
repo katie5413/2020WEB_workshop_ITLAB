@@ -96,19 +96,17 @@
             <h1>常用排版</h1>
             <h3>Position</h3>
             <p style="position:absolute; top:100px; right:20px;">這是一個被定位的段落</p>
-            <p>你還記得剛剛那個被定位的段落嗎？<span>不記得的話往上滑</span></p>
-            <p>他使用了<code>style="position:absolute; top:100px; right:20px;"</code>的屬性，不管世界如何變化，他始終如一</p>
+            <p>你還記得剛剛那個被定位的段落嗎b？<span>不記得的話往上滑</span></p>
+            <p>他使用了<code>style="position:<b>absolute</b>; top:100px; right:20px;"</code>的屬性，不管世界如何變化，他始終如一</p>
             <p style="position:relative; left:120px;">這是另一個被定位的段落</p>
-            <p>他使用了<code>style="position:relative; left:120px;"</code>的屬性，將元素從原本應該在的位置，進行相對的移動</p>
-            <p>現在看右下角的top圖示</p>
-            <p>他使用了<code>style="position:fixed;right:1rem;bottom: 10px;"</code>的屬性，將元素釘在視窗上</p>
-            <a href="#top">
-                <img src="img/top.png" width="40px" style="position:fixed;right:1rem;bottom: 10px;"></img>
-            </a>
+            <p>他使用了<code>style="position:<b>relative</b>; left:120px;"</code>的屬性，將元素從原本應該在的位置，進行相對的移動</p>
+            <p>現在看左下角的ufo圖示</p>
+            <p>他使用了<code>style="position:<b>fixed</b>;left:1rem;bottom: 10px;"</code>的屬性，將元素釘在視窗上</p>
+            <img src="img/ufo.png" width="40px" style="position:fixed;left:1rem;bottom: 10px;"></img>
             <hr>
             <h3>Display:none v.s Visibility:hidden</h3>
-            <p>消失的<span style="Display:none">密室</span>（哈利波特）｜<code>style="Display:none"</code></p>
-            <p>消失的<span style="Visibility:hidden">密室</span>(哈利波特)｜<code>style="Visibility:hidden"</code></p>
+            <p>消失的<span style="Display:none">密室</span>（哈利波特）｜<code>style="<b>Display:none</b>"</code></p>
+            <p>消失的<span style="Visibility:hidden">密室</span>(哈利波特)｜<code>style="<b>Visibility:hidden</b>"</code></p>
             <h4>同場加映：Display:block v.s Display:inline</h4>
             <p>其實就跟p還有span的關係一樣</p>
             <div class="container">
@@ -153,9 +151,13 @@
                 <h5>文字對齊</h5>
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="card" style="height:112px">
+                        <div class="card" style="height:224px">
                             <div class="card-body" >
                                 <div style="text-align:center;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+                                </div>
+                                <hr>
+                                <div class="text-center">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
                                 </div>
                             </div>
@@ -164,9 +166,13 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body" >
-                            <code>&ltdiv style="text-align:center;"&gt</code><br>
+                            <code>&ltdiv style="text-align:<b>center</b>;"&gt</code><br>
                             <code>&ltp&gt我是文字&lt/p&gt</code><br>
-                            <code>&lt/div&gt</code>                                
+                            <code>&lt/div&gt</code>  
+                            <hr>
+                            <code>&ltdiv class="<b>text-center</b>"&gt</code><br>
+                            <code>&ltp&gt我是文字&lt/p&gt</code><br>
+                            <code>&lt/div&gt</code>                              
                             </div>
                         </div>
                     </div>
@@ -186,7 +192,7 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body" >
-                            <code>&ltdiv style="text-align:left;"&gt</code><br>
+                            <code>&ltdiv style="text-align:<b>left</b>;"&gt</code><br>
                             <code>&ltp&gt我是文字&lt/p&gt</code><br>
                             <code>&lt/div&gt</code>                                
                             </div>
@@ -208,7 +214,7 @@
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body" >
-                            <code>&ltdiv style="text-align:right;"&gt</code><br>
+                            <code>&ltdiv style="text-align:<b>right</b>;"&gt</code><br>
                             <code>&ltp&gt我是文字&lt/p&gt</code><br>
                             <code>&lt/div&gt</code>                                
                             </div>
@@ -225,7 +231,7 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
                                 </div>
                                 <hr>
-                                <div style="text-align: justify;text-justify: distribute-all-lines;text-align-last: justify;">
+                                <div style="text-align: justify;text-align-last: justify;">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
                                 </div>
                             </div>
@@ -234,11 +240,11 @@
                     <div class="col-lg-6">
                         <div class="card" style="height:250px">
                             <div class="card-body" >
-                            <code>&ltdiv style="text-align: justify;"&gt</code><br>
+                            <code>&ltdiv style="text-align:<b>justify</b>;"&gt</code><br>
                             <code>&ltp&gt我是文字&lt/p&gt</code><code style="color:gray;">  //最後一行沒有分散對齊</code><br>
                             <code>&lt/div&gt</code>
                             <hr>
-                            <code>&ltdiv style="text-align: justify;text-justify: distribute-all-lines;text-align-last: justify;"&gt</code><br>
+                            <code>&ltdiv style="text-align: justify;<b>text-align-last:justify</b>;"&gt</code><br>
                             <code>&ltp&gt我是文字&lt/p&gt</code><code style="color:gray;">  //最後一行也會分散對齊</code><br>
                             <code>&lt/div&gt</code>                                
                             </div>
@@ -266,7 +272,7 @@
                     <div class="col-lg-6">
                         <div class="card" style="height:200px">
                             <div class="card-body" >
-                            <code>&ltdiv style="display:block;margin:auto;"&gt</code><br>
+                            <code>&ltdiv style="<b>display:block;margin:auto</b>;"&gt</code><br>
                             <code style="color:gray;">  //控制左右大小來置中</code><br>
                             <code>&ltimg src="圖片連結"&gt我是圖片&lt/img&gt</code><br>
                             <code>&lt/div&gt</code>                                
@@ -287,7 +293,7 @@
                     <div class="col-lg-6">
                         <div class="card" style="height:200px">
                             <div class="card-body" >
-                            <code>&ltdiv style="display: flex;justify-content: center;align-items: center;"&gt</code><br>
+                            <code>&ltdiv style="<b>display:flex;justify-content:center;align-items:center</b>;"&gt</code><br>
                             <code>&ltimg src="圖片連結"&gt我是圖片&lt/img&gt</code><br>
                             <code>&lt/div&gt</code>                                
                             </div>

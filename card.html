@@ -36,7 +36,7 @@
             <p>這些都是透過Bootstrap已經幫大家寫好的模組，來快速完成這個功能</p>           
             <p>範例：</p>
             <div class="row">
-                <div class="col-4">
+                <div class="col-lg-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">早安</h5>
@@ -60,37 +60,44 @@
                 </div> 
             </div>
             <hr>
+            <p>通常我們卡片都會配合grid使用，排版起來比較方便</p>
+            <p>比如說下面這個就是使用<code>.col-md-4</code></p>
+            <p>他會維持有三個的排版，一直到螢幕尺寸小於md（768px），大家可以試看看xl（1200px）、lg（992px）、sm（576px）、<code>col-xl/lg/md/sm-4</code></p>
             <div class="row">
-                <div class="col">
-                    <div class="card" style="width:300px">
+                <div class="col-md-4">
+                    <div class="card" >
                         <img class="card-img-top" src="img/dog2.jpeg" alt="dog" style="width:100%">
                         <div class="card-body">
                             <h3 class="card-title">總柴</h3>
                             <p class="card-text">：總有一天會有人用著我的照片，配上我沒講過的話</p>
-                            <a target="_blank"href="https://www.google.com/search?q=%E6%9F%B4%E7%8A%AC+%E6%A2%97%E5%9C%96&tbm=isch&ved=2ahUKEwiIsPmztt3pAhVJUJQKHbiPDQkQ2-cCegQIABAA&oq=%E6%9F%B4%E7%8A%AC+&gs_lcp=CgNpbWcQARgCMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIAFDdrgZY3a4GYJi9BmgAcAB4AIABMYgBMZIBATGYAQCgAQGqAQtnd3Mtd2l6LWltZw&sclient=img&ei=EkjTXojfJsmg0QS4n7ZI&bih=721&biw=1280" class="btn btn-primary">See Profile</a>
+                            <a target="_blank"href="https://zh.wikipedia.org/wiki/%E6%9F%B4%E7%8A%AC" class="btn btn-primary">See Profile</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card" style="width:300px">
-                        <img class="card-img-top" src="img/dog.jpg"  style="width:100%">
+                <br>
+                <div class="col-md-4">
+                    <div class="card" >
+                        <img class="card-img-top" src="img/dog.jpg" style="width:100%">
                         <div class="card-body">
-                            <h3 class="card-title">總柴</h3>
+                            <h3 class="card-title">總柴語錄</h3>
                             <p class="card-text">：ಠ_ಠ</p>
                             <p>a class="stretched-link"，整張卡片都可以點選</p>
-                            <a href="https://zh.wikipedia.org/wiki/%E9%98%BF%E5%B0%94%E4%BC%AF%E7%89%B9%C2%B7%E7%88%B1%E5%9B%A0%E6%96%AF%E5%9D%A6" class="btn btn-primary stretched-link">See Profile</a>
+                            <a target="_blank" href="https://zh.wikipedia.org/wiki/%E6%9F%B4%E7%8A%AC" class="btn btn-primary stretched-link">See Profile</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card" style="width:300px;">
+                <br>
+                <div class="col-md-4">
+                    <div class="card" >
                         <img class="card-img-top" src="img/dog2.jpeg"  style="width:100%">
-                        <div class="card-img-overlay">
-                            <h3 class="card-title text-white">總柴</h3>
-                            <p class="card-text text-white">class="card-body" 改為 card-img-overlay，則文字可以跟圖片重疊：</p>
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h3 class="card-title text-white">總柴開示</h3>
+                            <p class="card-text text-white ">class="card-body" 改為 card-img-overlay，則文字可以跟圖片重疊</p>
+                            <!-- 這裡預設是靠上對齊，我試了很久才改成靠下ＸＤ，有興趣的人可以去這裡看：https://stackoverflow.com/questions/45836381/how-do-i-position-text-on-the-bottom-of-an-image-overlay-in-a-card-in-bootstrap-->
                         </div>
                     </div>
                 </div>
+                <br>
             </div>
             <p>如果這也無法滿足你，可以去這裡（<a target="_blank" href="https://getbootstrap.com/docs/4.5/components/card/">看更多卡片樣式</a>）</p>
         </div>
