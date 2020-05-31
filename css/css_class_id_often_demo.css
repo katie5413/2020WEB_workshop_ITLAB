@@ -17,6 +17,10 @@ text-decoration:underline;
 #red{
 color:red;
 }
+
+#pink{
+  color:pink;
+}
    
 /*下面是常用屬性*/
 /*文字*/
@@ -30,8 +34,9 @@ color:red;
 .a_demo:active{color:green}
 
 /*「:link（未點）」和「:active（正在被觸發）」也可以用在 list */ 
-.li_demo:hover{color:red}
-.li_demo:active{color:green}
+.li_demo li:hover{color:red}
+.li_demo li:active{color:green}
+
 
 
 .fixed-bg {

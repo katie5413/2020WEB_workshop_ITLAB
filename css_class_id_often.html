@@ -43,25 +43,38 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">HTML</h5>
+                            <h5>不同階層：style > #id > .class > 普通標籤</h5>
                             <p>我是p</p>
-                            <code style="color:gray;">這裡的同階層的順序不影響結果，真正的戰場在css</code>
-                            <p class="blue ivory underline">我是class="blue ivory underline"的p</p>
+                            <p class="blue">我是class="blue"</p>
                             <p class="blue" id="red">我是class="blue" id="red"的p</p>
                             <p class="blue" id="red" style="color:green;">我是class="blue" id="red" style="color:green;"的p</p>
+                            <hr>
+                            <h5>同階層：後面 > 前面</h5>
+                            <code style="color:gray;">/* html順序不影響結果，真正的戰場在css */</code>
+                            <p class="blue ivory underline" >我是class="blue ivory underline"的p</p>
+                            <p class="ivory blue underline">我是class="ivory blue underline"的p</p>
+                            <code style="color:gray;">/* id只能有一個，所以這邊會顯示錯誤，往外層找最相關的 */</code>
+                            <p id="red pink" >我是id="red pink的p</p>
+                            <code style="color:gray;">/* id只能有一個，但如果你拆開寫也他會過，但只會顯示第一個 */</code>
+                            <p class="blue" id="pink" id="red">我是class="blue" id="pink" <del>id="red"</del>的p</p>                                                       
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">CSS</h5>                                    
+                            <h5 class="card-title">CSS</h5>
+                            <code style="color:gray;">/* 普通標籤 */</code><br>
                             <code>p{ color:black; }</code><br>
+                            <br><code style="color:gray;">/* .class */</code><br>
                             <code>.ivory{ color:ivory;}</code><br>
-                            <code style="color:gray;"></code>/*blue 比 ivory 還後面，所以會蓋掉前面的*/</code><br>
                             <code>.blue{ color:blue; }</code><br>
-                            <code style="color:gray;">/*雖然同階層，但結果不衝突，所以會1+1=2*/</code><br>
+                            <code style="color:gray;"></code><code style="color:gray;">/* blue 比 ivory 還後面，所以會蓋掉前面的 */</code><br>
+                            <code style="color:gray;">/* 雖然同階層，但結果不衝突，所以會1+1=2 */</code><br>
                             <code>.underline{ text-decoration:underline; }</code><br>
+                            <br><code style="color:gray;">/* #id */</code><br>
                             <code>#red{ color:red; } </code><br>
+                            <code>#pink{ color:pink; } </code><br>
                         </div>
                     </div>
                 </div> 
@@ -78,11 +91,45 @@
                 <li>color：預設顏色; //red,green,#FFFFF.. 有興趣可以去看<a target="_blank" href="https://www.ifreesite.com/color/web-color-code.htm">常用顏色表</a></li>
                 <li style="color:rgba(51,102,153);">color：rgb(red,green,blue); <code style="color:gray;">//rgb(255,255,255)＝white</code></li>
                 <li style="color:rgba(0,0,0,0.3);">color：rgba(red,green,blue,alpha); <code style="color:gray;">//rgb(0,0,0,0.3)</code></li>
-            </ul>    
-            <a class="a_demo" target="_blank" href="http://google.com">a標籤可以用hover，滑鼠滑過去會有特殊效果</a>
-            <ul class="li_demo">
-                <li>清單也可以</li>
-            </ul>  
+            </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <a class="a_demo" href="#">a標籤class="a_demo"</a><br>
+                                <a class="a_demo" href="#">a標籤class="a_demo"</a><br>
+                                <a class="a_demo" href="#">a標籤class="a_demo"</a><br>
+                                <a class="a_demo" href="#">a標籤class="a_demo"</a><br>
+                                <hr>
+                                <ul class="li_demo">
+                                    <li>&ltul class="li_demo"&gt</li>
+                                    <li>清單也可以</li>
+                                    <li>清單也可以</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <code style="color:gray;">/*「:link」和「:visited」必須在最前面</code><br>
+                                <code style="color:gray;">/*接著依序才是「:hover」和「:active」*/ </code></br>
+                                <code>.a_demo:link{color:blue}</code><code style="color:gray;"> /* :link（未點） */</code></br>
+                                <code>.a_demo:visited{color:purple}</code><code style="color:gray;"> /* :visited（點過） */</code><br>
+                                <code>.a_demo:hover{color:red}</code><code style="color:gray;"> /* :hover（懸浮） */</code></br>
+                                <code>.a_demo:active{color:green}</code><code style="color:gray;"> /* :active（正在被觸發） */</code></br>
+                                <hr>
+                                <code style="color:gray;">/*「:hover」和「:active」也可以用在 list */ </code></br>
+                                <code>.li_demo li:hover{color:red}</code><code style="color:gray;"> /* :hover（懸浮） */</code></br>
+                                <code>.li_demo li:active{color:green}</code><code style="color:gray;"> /* :active（正在被觸發） */</code><br>
+                                <code style="color:gray;"> /* 因為class放在ul，所以如果.li_demo後面沒有放li的話，他會整個清單都有反應，而不是一個一個顯示 */</code><br>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>    
+              
             <h3>背景</h3>
             <p>像下面這個parallax scrolling effect （<a target="_blank" href="https://www.w3schools.com/cssref/pr_background-attachment.asp">詳見此</a>）用起來感覺就很厲害</p>
             <div class="fixed-bg"><p class="bg_text" align="center">也可以在這加字啦</p></div>
